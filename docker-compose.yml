@@ -9,7 +9,6 @@ services:
     ports:
       - "5432:5432"
 
-  # Serviço do Backend (Spring Boot)
   backend:
     build: ./backend
     container_name: aircraft-api
@@ -23,12 +22,11 @@ services:
     depends_on:
       - db
 
-  # Serviço do Frontend (Nginx servindo AngularJS)
   frontend:
     image: nginx:alpine
     container_name: aircraft-web
     ports:
-      - "80:80"
+      - "8081:80"
     volumes:
       - ./frontend:/usr/share/nginx/html
     depends_on:
