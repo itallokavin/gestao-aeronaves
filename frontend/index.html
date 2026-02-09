@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="sondaApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AeroRegistry - Gestão de Aeronaves</title>
+    <link rel="stylesheet"
+        href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.26/angular-material.min.css">
+    <link rel="stylesheet" href="app/app.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body ng-cloak layout="column">
+
+    <header-component></header-component>
+    <md-content flex layout="column" class="md-padding main-content">
+        <div class="dashboard-stats">
+            <dashboard-stats></dashboard-stats>
+        </div>
+
+        <div layout="row" layout-xs="column" layout-sm="column" style="gap: 15px;">
+            <div flex="25" flex-xs="100" flex-sm="100" style="min-width: 250px;">
+                <aircraft-form></aircraft-form>
+            </div>
+
+            <div flex="100" flex-xs="100" flex-sm="100">
+                <aircraft-list></aircraft-list>
+            </div>
+        </div>
+    </md-content>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-messages.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.26/angular-material.min.js"></script>
+
+    <script src="app/app.js"></script>
+    <script src="app/services/aircraft.service.js"></script>
+    <script src="app/components/header/header.component.js"></script>
+    <script src="app/components/dashboard-stats/dashboard-stats.component.js"></script>
+    <script src="app/components/aircraft-list/aircraft-list.component.js"></script>
+    <script src="app/components/aircraft-form/aircraft-form.component.js"></script>
+
+</body>
+
+</html>

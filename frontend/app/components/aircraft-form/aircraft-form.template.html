@@ -1,0 +1,49 @@
+<div class="form-container">
+    <div layout="row" flex layout-align="center center" style="gap: 20px; padding: 20px;">
+        <md-icon style="color: #3f51b5">add_circle</md-icon>
+        <h2 class="md-title" style="margin: 0;">Cadastro de Aeronave</h2>
+    </div>
+
+    <form name="$ctrl.aircraftForm" ng-submit="$ctrl.submit()">
+        <div layout="column">
+            <md-input-container class="md-block">
+                <label>Marca do Fabricante</label>
+                <md-select ng-model="$ctrl.aircraft.brand" required>
+                    <md-option ng-repeat="brand in $ctrl.brands" value="{{brand}}">
+                        {{brand}}
+                    </md-option>
+                </md-select>
+            </md-input-container>
+
+            <md-input-container class="md-block">
+                <label>Modelo / Variante</label>
+                <input ng-model="$ctrl.aircraft.name" required>
+            </md-input-container>
+
+            <md-input-container class="md-block" flex>
+                <label>Ano de Fab.</label>
+                <input ng-model="$ctrl.aircraft.year" type="number" required>
+            </md-input-container>
+
+            <md-input-container class="md-block">
+                <label>Descrição</label>
+                <textarea ng-model="$ctrl.aircraft.description" md-maxlength="150" rows="3" required></textarea>
+            </md-input-container>
+
+            <div style="margin-bottom: 20px;">
+                <md-checkbox ng-model="$ctrl.aircraft.sold" class="md-primary">
+                    Vendido ?
+                </md-checkbox>
+            </div>
+
+            <div layout="row" layout-align="end center">
+                <md-button ng-if="$ctrl.aircraft.id" ng-click="$ctrl.cancel()">
+                    Cancelar
+                </md-button>
+                <md-button type="submit" class="md-raised md-primary">
+                    {{$ctrl.aircraft.id ? 'ATUALIZAR' : 'CADASTRAR'}}
+                </md-button>
+            </div>
+        </div>
+    </form>
+</div>

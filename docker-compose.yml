@@ -1,0 +1,35 @@
+services:
+  db:
+    image: postgres:15
+    container_name: aircraft-db
+    environment:
+      POSTGRES_DB: sonda_db
+      POSTGRES_USER: sonda
+      POSTGRES_PASSWORD: sonda
+    ports:
+      - "5432:5432"
+
+  # Serviço do Backend (Spring Boot)
+  backend:
+    build: ./backend
+    container_name: aircraft-api
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/sonda_db
+      SPRING_DATASOURCE_USERNAME: sonda
+      SPRING_DATASOURCE_PASSWORD: sonda
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+    depends_on:
+      - db
+
+  # Serviço do Frontend (Nginx servindo AngularJS)
+  frontend:
+    image: nginx:alpine
+    container_name: aircraft-web
+    ports:
+      - "80:80"
+    volumes:
+      - ./frontend:/usr/share/nginx/html
+    depends_on:
+      - backend

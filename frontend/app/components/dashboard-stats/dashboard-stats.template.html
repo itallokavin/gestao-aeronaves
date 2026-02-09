@@ -1,0 +1,10 @@
+<div layout="row" layout-xs="column" class="stats-container">
+    <md-card flex class="stat-card" ng-repeat="stat in $ctrl.stats" style="max-width: 450px;">
+        <md-card-content layout="row">
+            <div layout="column">
+                <span class="stat-label">{{stat.label}}</span>
+                <span class="stat-value">{{stat.value}}</span>
+            </div>
+        </md-card-content>
+    </md-card>
+</div>

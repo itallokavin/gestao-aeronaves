@@ -1,0 +1,255 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #F3F4F6;
+}
+
+.sonda-header {
+    background-color: #ffffff !important;
+    color: #1F2937 !important;
+    height: 100px;
+    padding: 0 40px;
+}
+
+.sonda-header h1 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 700;
+    color: #3f51b5;
+    letter-spacing: -1px;
+    line-height: 1;
+}
+
+.logo-icon {
+    color: #3f51b5 !important;
+    height: 45px !important;
+    width: 45px !important;
+    font-size: 45px !important;
+    margin-right: 12px;
+}
+
+.stats-container {
+    margin-bottom: 30px;
+    gap: 20px;
+}
+
+.stat-card {
+    border-radius: 16px !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+    background-color: #fff !important;
+    margin: 0 !important;
+    padding: 10px;
+}
+
+.stat-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: #9CA3AF;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.stat-value {
+    font-size: 32px;
+    font-weight: 800;
+    color: #111827;
+    line-height: 1;
+}
+
+
+
+md-table-container {
+    overflow-x: auto;
+    display: block;
+}
+
+.list-container {
+    background: #fff;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 30px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    border: 1px solid #E5E7EB;
+}
+
+.list-header {
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+}
+
+.md-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #111827;
+}
+
+.search-box {
+    background: #F9FAFB;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    padding: 8px 12px;
+    width: 320px;
+    transition: all 0.2s;
+}
+
+.search-box:focus-within {
+    border-color: #3f51b5;
+    box-shadow: 0 0 0 3px rgba(63, 81, 181, 0.1);
+}
+
+.search-box input {
+    border: none;
+    background: transparent;
+    margin-left: 8px;
+    width: 100%;
+    outline: none;
+    font-size: 14px;
+    color: #374151;
+}
+
+.aircraft-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.aircraft-table th {
+    color: #6B7280 !important;
+    font-weight: 600 !important;
+    font-size: 11px !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 16px !important;
+    border-bottom: 1px solid #E5E7EB;
+    text-align: center !important;
+}
+
+.aircraft-table td {
+    padding: 16px !important;
+    border-bottom: 1px solid #F3F4F6;
+    color: #374151;
+    transition: background-color 0.15s;
+    text-align: center !important;
+}
+
+.aircraft-table tr:hover td {
+    background-color: #F9FAFB;
+}
+
+.aircraft-table tr:last-child td {
+    border-bottom: none;
+}
+
+.id-cell {
+    color: #6B7280;
+    font-family: monospace;
+    font-size: 13px;
+}
+
+.brand-text {
+    font-size: 10px;
+    color: #4F46E5;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+}
+
+.model-text {
+    font-size: 15px;
+    font-weight: 600;
+    color: #111827;
+}
+
+.status-badge {
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.status-badge.sold {
+    background-color: #FFFBEB;
+    color: #B45309;
+    border: 1px solid #FEF3C7;
+}
+
+.status-badge.available {
+    background-color: #ECFDF5;
+    color: #047857;
+    border: 1px solid #D1FAE5;
+}
+
+.action-icon {
+    font-size: 18px !important;
+    color: #9CA3AF;
+    transition: all 0.2s;
+}
+
+.md-button.md-icon-button:hover .action-icon {
+    color: #3f51b5;
+    transform: scale(1.1);
+}
+
+.form-container {
+    background: #fff;
+    border-radius: 12px;
+    padding: 32px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    border: 1px solid #E5E7EB;
+    width: 100%;
+    max-width: 450px;
+}
+
+md-input-container.md-block {
+    margin: 20px 0 !important;
+    width: 100%;
+    z-index: 10;
+}
+
+.form-container .md-button {
+    margin: 0;
+    margin-left: 8px;
+    border-radius: 8px;
+    height: 40px;
+}
+
+.brand-stat-chip {
+    background-color: #F3F4F6;
+    border-radius: 6px;
+    padding: 6px 12px;
+    display: flex;
+    align-items: center;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.brand-stat-chip .brand-name {
+    color: #6B7280;
+    margin-right: 6px;
+}
+
+.brand-stat-chip .brand-count {
+    background-color: #fff;
+    color: #3f51b5;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 700;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+md-input-container .md-errors-spacer {
+    min-height: 0;
+}
+
+md-icon {
+    margin: 0 !important;
+    padding: 0 !important;
+}
