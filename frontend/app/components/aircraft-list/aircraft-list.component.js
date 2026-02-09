@@ -42,7 +42,7 @@
                 .textContent('A aeronave ' + aircraft.name + ' será removida permanentemente.')
                 .ariaLabel('Confirmar exclusão')
                 .targetEvent(ev)
-                .ok('Sim, excluir')
+                .ok('Excluir')
                 .cancel('Cancelar');
 
             $mdDialog.show(confirm).then(function () {
